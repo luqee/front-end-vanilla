@@ -1,4 +1,4 @@
-@import "colors";
+@import "_colors.scss";
 div#menu {
-    background-color: black;
+    background-color: $black;
 }

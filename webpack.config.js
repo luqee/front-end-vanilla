@@ -1,7 +1,12 @@
 var path = require('path');
-var webpack = require('webpack');
+var extractTextPlugin = require('extract-text-webpack-plugin');
+
+var extractPlugin = new extractTextPlugin({
+    filename: 'main.css',
+    allChunks: true
+})
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -10,17 +15,25 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.js$/,
                 use:[
-                    'css-loader',
-                    'style-loader'
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['es2015']
+                        }
+                    }
                 ]
+            },
+            {
+                test: /\.scss$/,
+                use: extractPlugin.extract({
+                    use: ['css-loader', 'sass-loader']
+                })
             }
         ]
     },
-    // plugins: [
-    //     new webpack.optimize.UglifyJsPlugin({
-    //         // ...
-    //     })
-    // ]
+    plugins: [
+        extractPlugin
+    ]
 };

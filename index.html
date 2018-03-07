@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Chores:front</title>
+    <link href="dist/main.css" rel="stylesheet" />
   </head>
   <body>
       <div id="wrap">
@@ -22,7 +23,31 @@
               <div id="login-control">
                   Log in to your account as
                   <button id="client-login">get chores done</button>
-                  <button id="client-login">Provide your services</button>
+                  <div id="client-form">
+                      <form>
+                        <div className='form-row'>
+                            <label htmlFor='phone_number'>Phone number: </label><input type='text' name='phone_number' placeholder='Your Phone number' />
+                        </div>
+                        <div className='form-row'>
+                            <label htmlFor='password'>Password: </label><input type='password' name='password' />
+                        </div>
+
+                      <input type='button' id='cli_login_button' name='login_button' value='Login' />
+                    </form>
+                  </div>
+
+                  <button id="provider-login">Provide your services</button>
+                  <div id="provider-form">
+                      <form>
+                        <div className='form-row'>
+                            <label htmlFor='email_address'>E-mail: </label><input type='text' name='email_address' placeholder='E-mail address' />
+                        </div>
+                        <div className='form-row'>
+                            <label htmlFor='password'>Password: </label><input type='password' name='password' />
+                        </div>
+                        <input type='button' id='pro_login_button' name='login_button' value='Login' />
+                    </form>
+                  </div>
               </div>
           </div>
           <div id="footer">
