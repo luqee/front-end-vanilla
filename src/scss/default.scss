@@ -1,4 +1,47 @@
 @import "_colors.scss";
 div#menu {
-    background-color: $black;
+    background-color: $green;
+    height: 50px;
+    position: relative;
+
+    .logo {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    nav,
+    nav ul,
+    nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    nav {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+
+        ul {
+            list-style-type: none;
+            li {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+div#content {
+    padding: 5px;
+
+    #banner {
+        display: flex;
+        #cta {
+            flex-basis: 70%;
+        }
+        #login-control {
+            flex-basis: 30%;
+        }
+    }
 }
