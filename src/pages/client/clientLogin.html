@@ -20,22 +20,17 @@
               </nav>
           </div>
 
-          <div className='form-wrapper'>
+          <div className='login-form'>
+              Client Login form
                   <form>
                       <div className='form-row'>
-                          <label for='user_name'>User Name: </label><input type='text' name='user_name' placeholder='First Name' />
+                          <label htmlFor='phone_number'>Number: </label><input type='text' name='phone_number' placeholder='Your Phone number' />
                       </div>
                       <div className='form-row'>
-                          <label for='phone_number'>Phone number: </label><input type='text' name='phone_number' placeholder='Your Phone number' />
-                      </div>
-                      <div className='form-row'>
-                          <label for='password'>Password: </label><input type='password' name='password' />
-                      </div>
-                      <div className='form-row'>
-                          <label for='conf_password'>Re-type Password: </label><input type='password' name='conf_password'  />
+                          <label htmlFor='password'>Password: </label><input type='password' name='password' />
                       </div>
 
-                    <input type='button' name='sign_up_button' value='Register as Client' />
+                      <input type='button' id='login_button' name='login_button' value='Login' />
                   </form>
           </div>
 
@@ -44,4 +39,4 @@
           </div>
       </div>
   </body>
-</html>
+  </html>

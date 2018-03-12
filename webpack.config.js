@@ -10,6 +10,11 @@ module.exports = {
   entry: {
       index: './src/js/index.js',
       provReg: './src/js/provider_register.js',
+      cliReg: './src/js/client_register.js',
+      provLogin: './src/js/provider_login.js',
+      cliLogin: './src/js/client_login.js',
+      provHome: './src/js/provider_home.js',
+      cliHome: './src/js/client_home.js',
     //   provCss: './src/scss/default.scss'
   },
   // target: 'node',
@@ -65,8 +70,33 @@ module.exports = {
         }),
         new htmlWebpackPlugin({
             filename: 'providerReg.html',
-            template: 'src/providerReg.html',
+            template: 'src/pages/provider/providerReg.html',
             chunks: ['provReg']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'clientReg.html',
+            template: 'src/pages/client/clientReg.html',
+            chunks: ['cliReg']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'providerLogin.html',
+            template: 'src/pages/provider/providerLogin.html',
+            chunks: ['provLogin']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'clientLogin.html',
+            template: 'src/pages/client/clientLogin.html',
+            chunks: ['cliLogin']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'providerHome.html',
+            template: 'src/pages/provider/providerHome.html',
+            chunks: ['provHome']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'clientHome.html',
+            template: 'src/pages/client/clientHome.html',
+            chunks: ['cliHome']
         }),
         new cleanWebpackPlugin(['dist'])
     ]
