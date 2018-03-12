@@ -7,9 +7,14 @@ var extractPlugin = new extractTextPlugin({
     filename: 'main.css'
 })
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+      index: './src/js/index.js',
+      provReg: './src/js/provider_register.js',
+    //   provCss: './src/scss/default.scss'
+  },
+  // target: 'node',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     // publicPath: '/dist'
     },
@@ -54,7 +59,14 @@ module.exports = {
     plugins: [
         extractPlugin,
         new htmlWebpackPlugin({
-            template: 'src/index.html'
+            filename: 'index.html',
+            template: 'src/index.html',
+            chunks: ['index']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'providerReg.html',
+            template: 'src/providerReg.html',
+            chunks: ['provReg']
         }),
         new cleanWebpackPlugin(['dist'])
     ]

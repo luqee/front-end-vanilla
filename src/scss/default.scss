@@ -1,13 +1,15 @@
 @import "_colors.scss";
 div#menu {
-    background-color: $green;
-    height: 50px;
+    background-color: $blue;
+    height: 70px;
     position: relative;
+    
 
     .logo {
         position: absolute;
-        top: 15px;
-        left: 15px;
+        // top: 15px;
+        // left: 15px;
+        // background-image: url('../img/chores-logo-1.png');
     }
 
     nav,
@@ -20,13 +22,17 @@ div#menu {
 
     nav {
         position: absolute;
-        top: 15px;
+        top: 35px;
         left: 50%;
 
         ul {
             list-style-type: none;
             li {
                 display: inline-block;
+
+                a {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -42,6 +48,13 @@ div#content {
         }
         #login-control {
             flex-basis: 30%;
+            #provider-form, #client-form {
+                display: none;
+            }
+            button {
+                width: 100%;
+                background-color: $col-btn-bck;
+            }
         }
     }
 }
