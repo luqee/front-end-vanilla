@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Chores: provider registration</title>
+    <title>Chores: client registration</title>
     <link rel="stylesheet" href='main.css' />
   </head>
   <body>
@@ -21,21 +21,21 @@
           </div>
 
           <div className='form-wrapper'>
-                  <form>
+                  <form id='client_signup'>
                       <div className='form-row'>
-                          <label for='user_name'>User Name: </label><input type='text' name='user_name' placeholder='First Name' />
+                          <label for='user_name'>User Name: </label><input type='text' name='user_name' placeholder='User Name' required />
                       </div>
                       <div className='form-row'>
-                          <label for='phone_number'>Phone number: </label><input type='text' name='phone_number' placeholder='Your Phone number' />
+                          <label for='phone_number'>Phone number: </label><input type='tel' name='phone_number' placeholder='Your Phone number' required />
                       </div>
                       <div className='form-row'>
-                          <label for='password'>Password: </label><input type='password' name='password' />
+                          <label for='password'>Password: </label><input type='password' name='password' required />
                       </div>
                       <div className='form-row'>
-                          <label for='conf_password'>Re-type Password: </label><input type='password' name='conf_password'  />
+                          <label for='conf_password'>Re-type Password: </label><input type='password' name='conf_password' required />
                       </div>
 
-                    <input type='button' name='sign_up_button' value='Register as Client' />
+                    <input type='button' name='sign_up_button' id="sign_up_button" value='Register as Client' />
                   </form>
           </div>
 

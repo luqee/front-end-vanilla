@@ -8,7 +8,7 @@ const providerLoginDiv = document.querySelector('#provider-form');
 const clientButton = document.querySelector('#client-login');
 const providerButton = document.querySelector('#provider-login');
 
-const toggleClient = () =>{
+var toggleClient = () =>{
     if (clientLoginDiv.style['display'] === 'none'){
         clientLoginDiv.style['display'] = 'block';
         providerLoginDiv.style['display'] = 'none';
@@ -17,7 +17,7 @@ const toggleClient = () =>{
         clientLoginDiv.style['display'] = 'none';
     }
 };
-const toggleProvider = () =>{
+var toggleProvider = () =>{
     console.log('providerButton clicked');
     if (providerLoginDiv.style['display'] === 'none'){
         providerLoginDiv.style['display'] = 'block';
