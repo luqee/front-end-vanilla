@@ -24,8 +24,8 @@ const signupProvider = (event) => {
             console.log(ajaxRequest.getAllResponseHeaders());
             console.log('Response text: '+ ajaxRequest.responseText);
             //redirect to login page
-            var res = JSON.parse(ajaxRequest.responseText)
-            if ( res['result'] === 'success'){
+            var res = JSON.parse(ajaxRequest.responseText);
+            if ( res.result === 'success'){
                 console.log('start redirecting');
                 window.location.replace('/providerLogin.html');
             }
@@ -34,7 +34,6 @@ const signupProvider = (event) => {
     ajaxRequest.open('POST', 'http://127.0.0.1:5000/chores/api/v1.0/auth/provider/register', true);
     ajaxRequest.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
     ajaxRequest.send(serialize(data));
-    console.log(serialize(data));
 };
 
 var serialize = function(obj) {
@@ -44,4 +43,4 @@ var serialize = function(obj) {
       str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
     }
     return str.join("&");
-}
+};
