@@ -1,0 +1,13 @@
+@import "_colors.scss";
+
+div#main-content {
+    display: flex;
+
+    #side-panel {
+        flex: 1;
+        // flex-basis: 20%;
+    }
+    #view {
+        flex: 3;
+    }
+}

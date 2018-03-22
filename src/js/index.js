@@ -1,4 +1,5 @@
 import '../scss/default.scss';
+import '../scss/client_home.scss';
 import '../menu.html';
 // import {includeHTML} from './includeHtml';
 

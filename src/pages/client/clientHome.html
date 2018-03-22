@@ -19,8 +19,25 @@
                   </ul>
               </nav>
           </div>
-          <div className='main-content'>
-              Client Dashboard.
+          <div id='main-content'>
+              <div id="side-panel">
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">History</a></li>
+                      <li><a href="#">Settings</a></li>
+                  </ul>
+              </div>
+              <div id="view">
+                  <p>Welcome to your dashboard's home page.</p>
+                  <p> Select a category to view available providers</p>
+                  <select id="category-selector">
+                      <option value="plumber">plumber</option>
+                      <option value="cook">cook</option>
+                      <option value="cleaner">cleaner</option>
+                      <option value="club">club</option>
+                  </select>
+                  <button id="view-cat">View</button>
+              </div>
         </div>
           <div id="footer">
               Design by <span id="brand">luqee productions</span>
