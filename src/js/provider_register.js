@@ -8,8 +8,8 @@ const signupProvider = (event) => {
     let regProvForm = document.getElementById('provider-reg-form');
     console.log('get form\'s elements');
     const elems = regProvForm.elements;
-    var user_name = elems.namedItem('first_name').value;
-    var phone_number = elems.namedItem('email_address').value;
+    var user_name = elems.namedItem('provider_name').value;
+    var phone_number = elems.namedItem('phone_number').value;
     var password = elems.namedItem('password').value;
 
     console.log('Variables to be sent are '+ user_name + ", " + phone_number + " and "+ password);

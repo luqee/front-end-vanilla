@@ -9,21 +9,27 @@ const clientButton = document.querySelector('#client-login');
 const providerButton = document.querySelector('#provider-login');
 
 var toggleClient = () =>{
-    if (clientLoginDiv.style['display'] === 'none'){
-        clientLoginDiv.style['display'] = 'block';
-        providerLoginDiv.style['display'] = 'none';
+    console.log('clientButton clicked');
+    console.log('style is :: '+ clientLoginDiv.style.display);
+    if (clientLoginDiv.style.display === 'none'|| providerLoginDiv.style.display === ''){
+        console.log('was none');
+        clientLoginDiv.style.display = 'block';
+        providerLoginDiv.style.display = 'none';
 
     }else {
-        clientLoginDiv.style['display'] = 'none';
+        clientLoginDiv.style.display = 'none';
     }
 };
 var toggleProvider = () =>{
     console.log('providerButton clicked');
-    if (providerLoginDiv.style['display'] === 'none'){
-        providerLoginDiv.style['display'] = 'block';
-        clientLoginDiv.style['display'] = 'none';
+    console.log('style is :: '+ clientLoginDiv.style.display);
+
+    if (providerLoginDiv.style.display === 'none' || providerLoginDiv.style.display === ''){
+        console.log('was none');
+        providerLoginDiv.style.display = 'block';
+        clientLoginDiv.style.display = 'none';
     }else {
-        providerLoginDiv.style['display'] = 'none';
+        providerLoginDiv.style.display = 'none';
     }
 };
 

@@ -5,7 +5,7 @@ window.onload = () => {
 };
 const signupClient = () => {
     let regCliForm = document.getElementById('client_signup');
-    const elems = regProvForm.elements;
+    const elems = regCliForm.elements;
     var user_name = elems.namedItem('user_name').value;
     var phone_number = elems.namedItem('phone_number').value;
     var password = elems.namedItem('password').value;
