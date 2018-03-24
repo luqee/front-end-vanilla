@@ -5,7 +5,7 @@ var cleanWebpackPlugin = require('clean-webpack-plugin');
 
 var extractPlugin = new extractTextPlugin({
     filename: 'main.css'
-})
+});
 module.exports = {
   entry: {
       index: './src/js/index.js',
