@@ -40,14 +40,26 @@ providerButton.addEventListener('click',toggleProvider);
 const clientLoginButton = document.querySelector('#cli_login_button');
 const providerLoginButton = document.querySelector('#pro_login_button');
 
+//Slideshow script
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+const prevButton =  document.querySelector('a.prev');
+const nextButton =  document.querySelector('a.next');
+const thumbNails = document.querySelectorAll('span.dot');
 
+prevButton.addEventListener('click', () => {
+  showSlides(slideIndex -= 1);
+},);
+nextButton.addEventListener('click', () => {
+  showSlides(slideIndex += 1);
+},);
+
+for (let i = 0; i < thumbNails.length; i++) {
+    thumbNails[i].addEventListener('click', () => {
+      currentSlide(i+1);
+    });
+}
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
