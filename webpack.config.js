@@ -2,6 +2,8 @@ var path = require('path');
 var extractTextPlugin = require('extract-text-webpack-plugin');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var cleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 var extractPlugin = new extractTextPlugin({
     filename: 'main.css'
@@ -58,7 +60,20 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            // {
+            //     test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+            //     use:[
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'img/',
+            //                 publicPath: 'img/'
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     },
     plugins: [
@@ -98,6 +113,7 @@ module.exports = {
             template: 'src/pages/client/clientHome.html',
             chunks: ['cliHome']
         }),
+        new CopyWebpackPlugin([{ from: 'src/assets/webfonts/', to: 'assets/webfonts'}]),
         new cleanWebpackPlugin(['dist'])
     ]
 };
