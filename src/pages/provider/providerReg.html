@@ -3,6 +3,26 @@
   <head>
     <title>Chores: provider registration</title>
     <link rel="stylesheet" href='main.css' />
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-functions.js"></script> -->
+    <!-- <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDX6gLOCC5GdVoF1Q9Ni0SII-s8OjAWKTQ",
+        authDomain: "chores-f5f4c.firebaseapp.com",
+        databaseURL: "https://chores-f5f4c.firebaseio.com",
+        projectId: "chores-f5f4c",
+        storageBucket: "chores-f5f4c.appspot.com",
+        messagingSenderId: "881509457100"
+      };
+      firebase.initializeApp(config);
+    </script> -->
   </head>
   <body>
       <div id="wrap">
@@ -19,23 +39,28 @@
                   </ul>
               </nav>
           </div>
-          <div className='form-wrapper'>
-        <form id="provider-reg-form">
-            <div className='form-row'>
-                <label htmlFor='provider_name'>Provider Name: </label><input type='text' name='provider_name' placeholder='Your Name' required />
-            </div>
-            <div className='form-row'>
-                <label htmlFor='phone_number'>Phone No.: </label><input type='tel' name='phone_number' placeholder='Your phone number' required />
-            </div>
-            <div className='form-row'>
-                <label htmlFor='password'>Password: </label><input type='password' name='password' required/>
-            </div>
-            <div className='form-row'>
-                <label htmlFor='conf_password'>Re-type Password: </label><input type='password' name='conf_password'  required/>
-            </div>
+          <div class='form-wrapper'>
+            <form id="provider-reg-form">
+              <div class='form-row'>
+                  <label htmlFor='provider_name'>Provider Name: </label><input type='text' name='provider_name' placeholder='Your Name' required />
+              </div>
+              <div class='form-row'>
+                  <label htmlFor='phone_number'>Phone No.: </label><input type='tel' name='phone_number' placeholder='Your phone number' required />
+              </div>
+              <div class='form-row'>
+                  <label htmlFor='password'>Password: </label><input type='password' name='password' required/>
+              </div>
+              <div class='form-row'>
+                  <label htmlFor='conf_password'>Re-type Password: </label><input type='password' name='conf_password'  required/>
+              </div>
 
-              <button type="button" name='sign_up_button' id="sign_up_button" >Register as Provider</button>
+                <button type="button" name='sign_up_button' id="sign_up_button" >Register as Provider</button>
             </form>
+
+            <div id="firebasui">
+
+            </div>
+            <div id="loader">Loading...</div>
         </div>
           <div id="footer">
               Design by <span id="brand">luqee productions</span>

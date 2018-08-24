@@ -10,6 +10,46 @@ html, body{
         min-height: 100%;
         position: relative;
 
+        div#menu {
+            background-color: $blue;
+            height: 70px;
+            position: relative;
+
+
+            .logo {
+                position: absolute;
+                // top: 15px;
+                // left: 15px;
+                // background-image: url('../img/chores-logo-1.png');
+            }
+
+            nav,
+            nav ul,
+            nav ul li {
+                margin: 0;
+                padding: 0;
+            }
+
+
+            nav {
+                position: absolute;
+                top: 35px;
+                left: 50%;
+
+                ul {
+                    list-style-type: none;
+                    li {
+                        display: inline-block;
+
+                        a {
+                            text-decoration: none;
+                            color: #f34fa6;
+                        }
+                    }
+                }
+            }
+        }
+
         div#footer {
             position: absolute;
             bottom: 0;
@@ -38,51 +78,29 @@ html, body{
 @import "myCarousel.scss";
 
             }
-        }
-    }
 
-
-}
-
-div#menu {
-    background-color: $blue;
-    height: 70px;
-    position: relative;
-
-
-    .logo {
-        position: absolute;
-        // top: 15px;
-        // left: 15px;
-        // background-image: url('../img/chores-logo-1.png');
-    }
-
-    nav,
-    nav ul,
-    nav ul li {
-        margin: 0;
-        padding: 0;
-    }
-
-
-    nav {
-        position: absolute;
-        top: 35px;
-        left: 50%;
-
-        ul {
-            list-style-type: none;
-            li {
-                display: inline-block;
-
-                a {
-                    text-decoration: none;
-                    color: #f34fa6;
-                }
+            .client-promo {
+              background-color: grey;
+            }
+            .provider-promo {
+              background-color: pink;
+            }
+            div.promo {
+              h1 {
+                text-align: center;
+                margin: 0;
+              }
+              .sell-point  {
+                text-align: center;
+              }
             }
         }
     }
+
+
 }
+
+
 // div#footer {
 //     position: relative;
 //     height: 100px;
