@@ -20,19 +20,23 @@
               </nav>
           </div>
 
-          <div className='login-form'>
-              Client Login form
-                  <form id="client-login-form">
-                      <div className='form-row'>
-                          <label htmlFor='phone_number'>Number: </label><input type='text' name='phone_number' placeholder='Your Phone number' />
-                      </div>
-                      <div className='form-row'>
-                          <label htmlFor='password'>Password: </label><input type='password' name='password' />
-                      </div>
+          <div id="content">
+            <div class='form-wrapper'>
+                    <form id="client-login-form">
+                        <div class='form-row'>
+                            <label htmlFor='phone_number'>Number: </label><input type='text' name='phone_number' placeholder='Your Phone number' />
+                        </div>
+                        <div class='form-row'>
+                            <label htmlFor='password'>Password: </label><input type='password' name='password' />
+                        </div>
+                        <div class="form-row">
+                          <button type='button' id='login_button' name='login_button'> Login </button>
+                        </div>
 
-                      <input type='button' id='login_button' name='login_button' value='Login' />
-                  </form>
+                    </form>
+            </div>
           </div>
+
 
           <div id="footer">
               Design by <span id="brand">luqee productions</span>

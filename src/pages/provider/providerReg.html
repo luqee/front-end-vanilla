@@ -39,29 +39,34 @@
                   </ul>
               </nav>
           </div>
-          <div class='form-wrapper'>
-            <form id="provider-reg-form">
-              <div class='form-row'>
-                  <label htmlFor='provider_name'>Provider Name: </label><input type='text' name='provider_name' placeholder='Your Name' required />
-              </div>
-              <div class='form-row'>
-                  <label htmlFor='phone_number'>Phone No.: </label><input type='tel' name='phone_number' placeholder='Your phone number' required />
-              </div>
-              <div class='form-row'>
-                  <label htmlFor='password'>Password: </label><input type='password' name='password' required/>
-              </div>
-              <div class='form-row'>
-                  <label htmlFor='conf_password'>Re-type Password: </label><input type='password' name='conf_password'  required/>
-              </div>
+          <div id="content">
+            <div class='form-wrapper'>
+              <form id="provider-reg-form">
+                <div class='form-row'>
+                    <label for='provider_name'>Provider Name: </label><input type='text' name='provider_name' placeholder='Your Name' required />
+                </div>
+                <div class='form-row'>
+                    <label for='phone_number'>Phone No.: </label><input type='tel' name='phone_number' placeholder='Your phone number' required />
+                </div>
+                <div class='form-row'>
+                    <label for='password'>Password: </label><input type='password' name='password' required/>
+                </div>
+                <div class='form-row'>
+                    <label for='conf_password'>Re-type Password: </label><input type='password' name='conf_password'  required/>
+                </div>
 
-                <button type="button" name='sign_up_button' id="sign_up_button" >Register as Provider</button>
-            </form>
+                <div class="form-row">
+                  <button type="button" name='sign_up_button' id="sign_up_button" >Register as Provider</button>
+                </div>
+              </form>
 
-            <div id="firebasui">
+              <!-- <div id="firebasui">
 
+              </div> -->
+              <!-- <div id="loader">Loading...</div> -->
             </div>
-            <div id="loader">Loading...</div>
-        </div>
+          </div>
+
           <div id="footer">
               Design by <span id="brand">luqee productions</span>
           </div>
